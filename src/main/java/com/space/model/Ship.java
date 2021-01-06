@@ -1,6 +1,5 @@
 package com.space.model;
 
-import jakarta.validation.constraints.*;
 import javax.persistence.*;
 import java.util.Date;
 
