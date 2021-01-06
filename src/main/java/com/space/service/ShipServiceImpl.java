@@ -224,7 +224,7 @@ public class ShipServiceImpl implements ShipService{
     }
 
     private Boolean isNameValidated(String name){
-        if(name.isEmpty() || name.isBlank() || name == null){
+        if(name.isEmpty() || name == null){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Name value");
         }else{
             return true;
