@@ -13,13 +13,9 @@ public class Ship {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty(message = "The field 'name' must not be empty")
-    @Size(max = 50, message = "The field's 'name' max size must be not bigger than 50 characters")
     @Column(name = "name")
     private String name;
 
-    @NotEmpty(message = "The field 'planet' must not be empty")
-    @Size(max = 50, message = "The field's 'planet' max size must be not bigger than 50 characters")
     @Column(name = "planet")
     private String planet;
 
@@ -27,24 +23,16 @@ public class Ship {
     @Column(name = "shipType")
     private ShipType shipType;
 
-    @NotNull(message = "The field 'prodDate' must not be null")
     @Column(name = "prodDate")
     @Temporal(TemporalType.DATE)
     private Date prodDate;
 
-    @NotNull
     @Column(name = "isUsed")
     private Boolean isUsed;
 
-    @NotNull(message = "The field 'speed' must not be null")
-    @DecimalMin(value = "0.01", message = "The field 'speed' value must be greater than 0.00")
-    @DecimalMax(value = "0.99", message = "The field 'speed' value must be les than 1.00")
     @Column(name = "speed")
     private Double speed;
 
-    @NotNull
-    @Min(value = 1, message = "The field 'crewSize' value must be greater than 0")
-    @Max(value = 9999, message = "The field 'crewSize' value must be less than 10000")
     @Column(name = "crewSize")
     private Integer crewSize;
 
